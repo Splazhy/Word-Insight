@@ -9,7 +9,7 @@ A containerized service that fetches meanings of English words and turn it into 
 
 
 ## Dependencies
-
+**com.fasterxml.jackson.core** - JSON utilities library
 
 ## Special Thanks
 [**meetDeveloper**](https://github.com/meetDeveloper) for providing a great free public dictionary API that doesn't require API key authentication.

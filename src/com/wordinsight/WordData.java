@@ -28,6 +28,18 @@ public class WordData {
         meanings = new ArrayList<>();
     }
 
+    public String getWord() {
+        return word;
+    }
+
+    public String getPhonetic() {
+        return phonetic;
+    }
+
+    public String getDefinition() {
+        return meanings.get(0).definitions.get(0).definition;
+    }
+
     public void display() {
         System.out.println(word);
         System.out.println(phonetic);
