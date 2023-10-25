@@ -20,9 +20,9 @@ public class TextCapturer {
     private Font bodyFont;
 
     public TextCapturer() {
-        width = 600;
-        height = 600;
-        margin = 40;
+        width = 800;
+        height = 800;
+        margin = 60;
         try {
             mainFont = Font.createFont(Font.TRUETYPE_FONT, new File("fonts/Times New Roman.ttf"));
         } catch (FontFormatException e) {
@@ -30,9 +30,9 @@ public class TextCapturer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        titleFont = mainFont.deriveFont(Font.BOLD).deriveFont(72.0f);
-        subtitleFont = mainFont.deriveFont(Font.ITALIC).deriveFont(32.0f);
-        bodyFont = mainFont.deriveFont(Font.PLAIN).deriveFont(24.0f);
+        titleFont = mainFont.deriveFont(Font.BOLD).deriveFont(84.0f);
+        subtitleFont = mainFont.deriveFont(Font.ITALIC).deriveFont(42.0f);
+        bodyFont = mainFont.deriveFont(Font.PLAIN).deriveFont(32.0f);
     }
 
     public void writeNewImage(String title, String subtitle, String body) {
@@ -69,7 +69,7 @@ public class TextCapturer {
     public void writeNewImage(WordData wordData) {
         writeNewImage(
                 wordData.getWord(),
-                wordData.getPhonetic(),
+                wordData.getPhonetic() + " - " + wordData.getPartOfSpeech(),
                 wordData.getDefinition());
     }
 

@@ -36,6 +36,10 @@ public class WordData {
         return phonetic;
     }
 
+    public String getPartOfSpeech() {
+        return meanings.get(0).partOfSpeech;
+    }
+
     public String getDefinition() {
         return meanings.get(0).definitions.get(0).definition;
     }
