@@ -8,13 +8,14 @@ WORKDIR /app
 # Install Maven
 RUN apt-get update && \
     apt-get install -y maven
-    
+
 # Copy the Maven project's POM file and download dependencies
 COPY pom.xml .
 RUN mvn dependency:go-offline
 
 # Copy the entire Maven project (excluding the target directory) into the container
 COPY src src
+COPY fonts fonts
 
 # Build the Java application using Maven
 RUN mvn package
